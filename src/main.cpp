@@ -9,12 +9,12 @@
 #define OLED_RESET    -1
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-// --- HARDWARE PIN DEFINITIONS (ตามแผนผังวงจร) ---
-#define SENSOR_PIN    34  // CO Monitor / Analog Sensor Signal
-#define SENSOR_POWER  27  // VCC สำหรับ Sensor
-#define BUZZER_PIN    18  // Buzzer Speaker
-#define LED_GREEN_PIN  4  // Status Normal LED
-#define LED_RED_PIN    5  // Status Danger LED
+// --- HARDWARE PIN DEFINITIONS ---
+#define SENSOR_PIN    34  // Analog Pin ตรวจวัด CO ในลมหายใจ
+#define SENSOR_POWER  27  // จ่ายไฟเข้า Sensor
+#define BUZZER_PIN    18  // แจ้งเตือนเสียง
+#define LED_GREEN_PIN  4  // สถานะ ปกติ
+#define LED_RED_PIN    5  // สถานะ ตรวจพบ CO สูง
 
 // --- CONFIGURATION THRESHOLD ---
 const int DANGER_THRESHOLD = 400; // ค่าปรับเปลี่ยนตามการ Calibrate จริง
